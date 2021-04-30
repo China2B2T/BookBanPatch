@@ -26,8 +26,7 @@ public class Main extends JavaPlugin implements Listener {
 			return;
 		}
 		if (player.getInventory().getItemInMainHand().getType() == Material.WRITTEN_BOOK && ((BookMeta) player.getInventory().getItemInMainHand().getItemMeta()).getPage(1).contains("\u0800") && ((BookMeta) player.getInventory().getItemInMainHand().getItemMeta()).getPageCount() >= 1) {
-            player.sendMessage(ChatColor.RED + "Hey, you...don't do that >:(");
-            player.getInventory().setItemInMainHand(new ItemStack(Material.AIR));
+            player.getInventory().setItemInMainHand(new ItemStack(Material.BOOK_AND_QUILL));
         }
 	}
 }
